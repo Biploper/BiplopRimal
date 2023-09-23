@@ -1,0 +1,123 @@
+*{
+  font-family: Poppins;
+
+}
+.logo{
+
+
+
+}
+.logo img{
+  height: 90px;
+  width: 90px;
+padding: 2px;
+  border-radius: 80px;
+  position: fixed;
+  border: 2px solid black;
+
+}
+body{
+  background-color: #010718;
+  overflow: hidden;
+
+
+}
+.topnav{
+  overflow: hidden;
+  background-color: black;
+padding: 15px;
+border-radius: 10px;
+
+
+
+}
+.topnav a{
+  float: right;
+  text-align: right;
+  text-decoration: none;
+  padding: 14px 16px;
+  list-style: none;
+  font-size: 17px;
+  font-family: arial;
+  color: white;
+
+
+}
+.topnav a ::after{
+content: '';
+  width: 0%;
+  height: 2px;
+  background-color: #f44336;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.topnav a :hover::after{
+  width: 100%;
+}
+.text-box{
+  width: 90%
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: left;
+
+}
+.text-box h2{
+  font-size: 60px;
+  padding-top: 180px;
+  display: inline-block;
+  color: white;
+}
+.container{
+
+}
+.container .text{
+  position: relative;
+  font-size: 70px;
+  font-weight: 500;
+  color: #4070f4
+}
+.container .text.first-text{
+  color: white;
+}
+.text.sec-text::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #010718;
+  border-left: 2px solid #4070f4;
+  animation: animate 4s steps(12) infinite;
+}
+@keyframes animate{
+  40%, 60% {
+    left: 100%;
+  }
+  100%{
+      left: 0%;
+  }
+}
+
+.pic img{
+  border-radius: 100%;
+  border: 5px solid white;
+  height: 500px;
+margin-right: 50px;
+margin-top: 30px;
+float: right;
+}
+.bio {
+  font-size: 25px;
+color: white;
+}
+.fa-brands{
+font-size: 90px;
+  color: blue;
+position: relative;
+left: 30px;
+text-decoration: none;
+padding: 20px;
+  }
