@@ -1,123 +1,170 @@
-*{
-  font-family: Poppins;
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.logo{
 
-
-
-}
-.logo img{
-  height: 90px;
-  width: 90px;
-padding: 2px;
-  border-radius: 80px;
-  position: fixed;
-  border: 2px solid black;
-
-}
-body{
+body {
+  font-family: 'Poppins', 'sans-serif';
   background-color: #010718;
-  overflow: hidden;
-
-
-}
-.topnav{
-  overflow: hidden;
-  background-color: black;
-padding: 15px;
-border-radius: 10px;
-
-
-
-}
-.topnav a{
-  float: right;
-  text-align: right;
-  text-decoration: none;
-  padding: 14px 16px;
-  list-style: none;
-  font-size: 17px;
-  font-family: arial;
+  overflow-x: hidden;
   color: white;
-
-
 }
-.topnav a ::after{
-content: '';
-  width: 0%;
+
+header {
+  background-color: black;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 60px;
+  width: 60px;
+  padding: 5px;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+.topnav ul {
+  list-style: none;
+  display: flex;
+}
+
+.topnav li {
+  margin-right: 20px;
+}
+
+.topnav a {
+  text-decoration: none;
+  font-size: 17px;
+  color: white;
+  transition: 0.5s;
+}
+
+.topnav a::after {
+  content: '';
+  width: 0;
   height: 2px;
   background-color: #f44336;
   display: block;
   margin: auto;
   transition: 0.5s;
 }
-.topnav a :hover::after{
+
+.topnav a:hover::after {
   width: 100%;
 }
-.text-box{
-  width: 90%
-  position: absolute;
-  top: 50%;
-  left: 50%;
+
+.text-box {
   text-align: left;
-
+  padding: 50px 0 0 20px;
 }
-.text-box h2{
+
+.text-box h1 {
   font-size: 60px;
-  padding-top: 180px;
-  display: inline-block;
   color: white;
 }
-.container{
 
+.subtitle {
+  font-size: 24px;
+  margin-top: 10px;
 }
-.container .text{
-  position: relative;
-  font-size: 70px;
+
+.container {
+  text-align: left;
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.small-text {
+  font-size: 24px;
   font-weight: 500;
-  color: #4070f4
+  color: #4070f4;
 }
-.container .text.first-text{
+
+.big-text {
+  font-size: 40px;
+  font-weight: 500;
   color: white;
+  display: inline-block;
 }
-.text.sec-text::before{
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #010718;
-  border-left: 2px solid #4070f4;
-  animation: animate 4s steps(12) infinite;
+
+/* Animate "Student" and "Newbie Coder" */
+.animated-text {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
-@keyframes animate{
-  40%, 60% {
-    left: 100%;
+
+/* Animation for "Student" */
+@keyframes fadeInStudent {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
   }
-  100%{
-      left: 0%;
+  100% {
+      opacity: 1;
+      transform: translateY(0);
   }
 }
 
-.pic img{
-  border-radius: 100%;
-  border: 5px solid white;
-  height: 500px;
-margin-right: 50px;
-margin-top: 30px;
-float: right;
-}
-.bio {
-  font-size: 25px;
-color: white;
-}
-.fa-brands{
-font-size: 90px;
-  color: blue;
-position: relative;
-left: 30px;
-text-decoration: none;
-padding: 20px;
+/* Animation for "Newbie Coder" */
+@keyframes fadeInCoder {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
   }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Apply animations to the respective elements */
+#student {
+  animation-name: fadeInStudent;
+  animation-delay: 1s;
+}
+
+#coder {
+  animation-name: fadeInCoder;
+  animation-delay: 2s;
+}
+
+.pic {
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.pic img {
+  border-radius: 50%;
+  border: 5px solid white;
+  max-width: 150px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.bio {
+  font-size: 20px;
+  text-align: left;
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.socials {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.socials a {
+  text-decoration: none;
+  color: blue;
+  margin: 0 10px;
+  font-size: 30px;
+}
